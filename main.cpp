@@ -14,15 +14,26 @@ struct Node {
 };
 
 void preorder(Node* root) {
-    //TODO
+    if (root == nullptr) return;
+    cout << root->data << " "; 
+    preorder(root->left); 
+    preorder(root->right);
 }
 
 void inorder(Node* root) {
-    //TODO
+   if (root == nullptr) return;
+    
+    inorder(root->left);       
+    cout << root->data << " ";
+    inorder(root->right);  
 }
 
 void postorder(Node* root) {
-    //TODO
+    if (root == nullptr) return;
+    
+    postorder(root->left);    
+    postorder(root->right); 
+    cout << root->data << " "; 
 }
 
 void deleteTree(Node* root) {
